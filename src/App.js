@@ -1,9 +1,19 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Props from './Components/Props'
 
 const App = () => {
 
   const [name, setName] = useState("vinod");
+
+  useEffect(() => {
+    console.log("i render at every state change")
+  })
+
+  useEffect(() => {
+    console.log("i only render when the component mounts")
+  }, [])
+  
+  
 
   return (
     <div className='container pt-5'>
