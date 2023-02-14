@@ -15,17 +15,21 @@ body {
     min-height: 100vh;
     width: 100%;
     background-color: rgb(15, 18, 21);
-    color: #cccccc;
+    color: rgb(168, 168, 168);
     scroll-behavior: smooth;
 }
 
-#main{
+#main {
     min-height: 100vh;
     width: 100%;
 }
 
-.slide{
+.slide {
     min-height: 100vh;
     width: 100%;
     background-color: rgb(15, 18, 21);
+}
+
+h2 {
+    color: #0b8dad;
 }

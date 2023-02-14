@@ -11,9 +11,9 @@ const Props = (props) => {
 
     return (
         <>
-            <div>{pp}</div> <br />
-            <p>I am {name}</p>
-            <button onClick={nameChange}>name changer</button>
+            <h2>{pp}</h2>
+            <h5 style={{marginBottom: "10px"}}>I am {name}</h5>
+            <button className='btn btn-primary' onClick={nameChange}>name changer</button>
         </>
     )
 }
