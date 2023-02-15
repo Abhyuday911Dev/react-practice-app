@@ -5,6 +5,7 @@ import Home from './Components/Home';
 import Insidehome from './Components/Insidehome';
 import Pagechanger from './Components/Pagechanger';
 import User from './Components/User';
+import Useref from './Components/Useref';
 
 const App = () => {
 
@@ -23,8 +24,9 @@ const App = () => {
   return (
     <div className='container pt-5'>
       <nav>
-        <NavLink className='me-5' to="/homepage">homepage route</NavLink>
-        <NavLink to="/">user page</NavLink>
+        <NavLink className='me-3' to="/homepage">homepage route</NavLink>
+        <NavLink className='me-3' to="/">user page</NavLink>
+        <NavLink to="/useref">useref page</NavLink>
       </nav>
       {/* <h2 style={{ marginBottom: "30px" }}>This is my app file and my name is {name}</h2> */}
       {/* <Props pp="Hello im from props" name={name} setName={setName} /> */}
@@ -35,6 +37,7 @@ const App = () => {
           <Route path="/homepage/homechild" element={<Insidehome />}>home ka child</Route>
         </Route>
         <Route path="/changepage" element={<Pagechanger />}></Route>
+        <Route path="/useref" element={<Useref />}></Route>
       </Routes>
     </div>
   )

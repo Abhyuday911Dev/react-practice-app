@@ -33,3 +33,7 @@ body {
 h2 {
     color: #0b8dad;
 }
+
+a{
+    text-decoration: none;
+}
