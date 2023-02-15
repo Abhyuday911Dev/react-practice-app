@@ -1,9 +1,14 @@
-import React, { useEffect, useState } from 'react'
-import Props from './Components/Props'
+import React, { useEffect } from 'react'
+// import Props from './Components/Props'
+import { NavLink, Route, Routes } from "react-router-dom";
+import Home from './Components/Home';
+import Insidehome from './Components/Insidehome';
+import Pagechanger from './Components/Pagechanger';
+import User from './Components/User';
 
 const App = () => {
 
-  const [name, setName] = useState("vinod");
+  // const [name, setName] = useState("vinod");
 
   useEffect(() => {
     console.log("i render at every state change")
@@ -12,13 +17,25 @@ const App = () => {
   useEffect(() => {
     console.log("i only render when the component mounts")
   }, [])
-  
-  
+
+
 
   return (
     <div className='container pt-5'>
-      <h2 style={{ marginBottom: "30px" }}>This is my app file and my name is {name}</h2>
-      <Props pp="Hello im from props" name={name} setName={setName} />
+      <nav>
+        <NavLink className='me-5' to="/homepage">homepage route</NavLink>
+        <NavLink to="/">user page</NavLink>
+      </nav>
+      {/* <h2 style={{ marginBottom: "30px" }}>This is my app file and my name is {name}</h2> */}
+      {/* <Props pp="Hello im from props" name={name} setName={setName} /> */}
+
+      <Routes>
+        <Route path="/" element={<User />}></Route>
+        <Route path="/homepage" element={<Home />}>
+          <Route path="/homepage/homechild" element={<Insidehome />}>home ka child</Route>
+        </Route>
+        <Route path="/changepage" element={<Pagechanger />}></Route>
+      </Routes>
     </div>
   )
 }
